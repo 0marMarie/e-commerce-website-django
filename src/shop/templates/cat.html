@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title%}
+{{category}}
+{% endblock %}
+
+{% block body %}
+
+
+
+          
+                        
+
+    <div class="container-fluid">
+        <div class="row">
+           
+
+            <div class="col notfixe">
+
+
+        <section class="offers">
+                <div class="container mt-5">
+
+                    <h3 class="mb-5"> <span id="prettyone" ><i class="fas fa-tshirt mr-2 text-dark"></i></span>{{category}} Products </h3>
+                   
+                    <div class="row ">
+
+                        {% for item in products %}
+                                <div class="col-3">
+                                <div class="card mb-5 shadow">
+                                  <img src="{{item.image.url}}" class="card-img-top" alt="...">
+                                  <div class="card-body">
+                                    <h5 class="card-title"> <a href="{{item.get_absolute_url}}" class="text-dark h5 mylink1 nav-link p-0 "><strong>{{item.name}} </strong></a> </h5>
+                                    <p class="mt-4">{{item.price}}</p>
+
+                                    <span class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </span>
+
+                                    <p class="text-center">
+
+                                      <form method="post"  action="{% url 'cart:cart_add' item.id %}" class="mylabel1">
+
+                                          {{cart_product_form}}
+                                          {% csrf_token %}
+
+
+                                          <div><i class="fas fa-plus mylink1 text-info"></i>
+                                            <input type="submit" value="Add To Cart" class="btn btn-link text-info mylink nav-link d-inline"></div>
+
+
+
+                                      </form>
+
+
+                                 
+
+                                    </p>
+                                  </div>
+
+
+                        </div>
+                    </div>
+                        {% endfor %}
+                    
+                    </div>
+                </div>
+        </section>
+
+        
+           {% endblock %}

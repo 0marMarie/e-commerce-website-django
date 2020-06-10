@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %}
+You have searched for {{query}}
+{% endblock  %}
+
+     {% block body %}
+
+
+
+         <section class="offers">
+
+                <div class="container mt-5">
+
+                    <div class="row">
+
+                        {% for item in product %}
+
+                                <div class="col-4">
+                                    <div class="card mb-3 shadow">
+                                  <img src="{{item.image.url}}" class="card-img-top" alt="...">
+                                  <div class="card-body">
+                                    <h5 class="card-title"> <a href="{{item.get_absolute_url}}" class="text-dark h5 mylink1 nav-link p-0 "><strong>{{item.name}}</strong> </a> </h5>
+                                    <p class="mt-4">{{item.price}}</p>
+
+                                    <span class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </span>
+
+                                    <p class="text-center">
+                                      <form method="post"  action="{% url 'cart:cart_add' item.id %}" class="mylabel1">
+
+                                          {{cart_product_form}}
+                                          {% csrf_token %}
+
+
+                                          <div><i class="fas fa-plus mylink1 text-info"></i>
+                                            <input type="submit" value="Add To Cart" class="btn btn-link text-info mylink nav-link d-inline"></div>
+
+
+                                      </form>
+
+
+                                   
+
+                                    </p>
+                                </div>
+                                  </div>
+
+
+                        </div>
+
+                        {% endfor %}
+
+                    </div>
+                </div>
+        </section>
+
+
+    {% endblock %}}

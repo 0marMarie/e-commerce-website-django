@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %}
+{{product.name}}
+{% endblock  %}
+
+     {% block body %}
+
+
+<div class="container mt-5 mb-5">
+    <div class="row">
+        <div class="col mt-3 mr-3">
+          <img src="{{product.image.url}}" class="product justify-content-left">
+        </div>
+        <div class="col mr-3">
+            <h3 class="text-warning "><strong>{{product.price}}</strong></h3>
+            
+            
+            <p class="text-muted hm">By H&M</p>
+            <span class="rating1"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+            <p class="hi5 mb-4">Eligible for <strong>Free Shipping</strong></p>
+            <hr>
+            <p class="hi5 mt-4"><strong>Describtion :</strong></p>
+            <p class="hi5 text-muted mb-2">Product Features :</p>
+
+            <p class="hi6">Brand : H&M</p>
+            <p class="hi6">Size : xl</p>
+            <p class="hi6">Color : All Colors</p>
+            <p class="hi6">Targeted Groub : All</p>
+            <p class="hi6">Product status : Aviliable</p>
+            <p class="hi6">Marketing by : Dummy</p>
+
+
+        </div>
+
+        <div class="col text-center">
+            <h4 class="mb-3"><strong>{{product.name}}</strong></h4>
+            <p class="hi5" >Ship to <strong>Egypt</strong></p>
+            <p>Get It <strong>Tomorrow</strong> </p>
+            <form method="post"  action="{% url 'cart:cart_add' product.id %}" class="mylabel1">
+
+                {{cart_product_form}}
+                {% csrf_token %}
+                                                   <p class="text-center">
+
+
+                                   <input type="submit" value="Add To Cart" class="btn btn-dark text-center btn-lg hello mt-4 w-100">
+
+          </p>
+
+
+
+            </form>
+        </div>
+        </div>
+        </div>
+      </div>
+  </div>
+
+{% endblock %}

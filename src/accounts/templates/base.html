@@ -1,0 +1,106 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+
+    <link rel="icon" type="image/ico" href="{% static 'images/download.png' %}"/>
+    <title>
+    {% block title %}
+    DUMMY
+    {% endblock %}
+    </title>
+
+
+</head>
+
+<body>
+
+<!-- navbar -->
+
+      <div class="container-fluid">
+        <nav class="navbar navbar-light text-light d-flex justify-content-center justify-content-lg-between">
+
+                <a href="{% url 'shop:index' %}" class="navbar-brand">
+
+                    <h5 class="text-dark"><strong><img src="{% static 'images/download.png' %}" class="mr-1">DUMMY</strong></h5>
+
+                </a>
+
+                <form class="searchbar" method="GET" action="{% url 'shop:search' %}">
+                  <div class="input-group mb-3 mb-lg-0 ">
+                          <input type="text" class="form-control" placeholder="Search" name="q" value="{{request.GET.q}}">
+                      <div class="input-group-append">
+                          <span class="input-group-text search">
+                              <button class="btn btn-sm text-light"><i class="fas fa-search"> </i></button>
+                          </span>
+                      </div>
+                  </div>
+                   
+
+              </form>
+
+            {% if user.is_authenticated %}
+            <div class="">
+                <form method="post" action="{% url 'accounts:logout' %}" class="mylogout">
+
+                    <input type="submit" value="logout" class="mybutton btn btn-dark links">
+                    {% csrf_token %}
+
+                </form>
+            {% else %}
+
+                        <div>
+                         <a href="{%url 'accounts:signup' %}" class="btn btn-warning links">Sign Up</a>
+                         <a href="{%url 'accounts:login' %}" class="btn btn-warning ml-2 links">Sign IN</a>
+
+                         <a href="{% url 'cart:cart_detail' %}" class="cart"><i class="fas fa-cart-plus ml-2 icon mr-1"></i><strong class="text-dark">Cart</strong></a>
+                        </div>
+                        </div>
+            {% endif %}
+             </nav>
+          </div>
+
+
+            <section id="icons" class="category">
+                    <div class="container text-center ">
+
+                        <div class="row">
+                            <div class="col-md-3 p-3">
+                                <a id="category" href="/men" class="text-dark btn "><strong>MEN</strong></a>
+                            </div>
+                            <div class="col-md-3 p-3">
+                                    <a id="category" href="/kids" class="text-dark btn  "><strong>KIDS</strong></a>
+                            </div>
+                            <div class="col-md-3 p-3">
+                                    <a id="category" href="/accessories" class="text-dark btn  "><strong>ACCESSORIES</strong></a>
+                            </div>
+                            <div class="col-md-3 p-3">
+                                    <a id="category" href="/women" class="text-dark btn  "><strong>WOMEN</strong></a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+    {% block body %}
+    DUMMY
+    {% endblock %}
+
+                <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"  crossorigin="anonymous">
+                </script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"  crossorigin="anonymous">
+                </script>
+                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" crossorigin="anonymous">
+                </script>
+                <script src="{% static 'js/javascript.js' %}"></script>
+                
+                
+</body>
+
+</html>

@@ -1,0 +1,263 @@
+body {
+  font-family: "lato", sans-serif; }
+
+.container {
+  max-width: 800px; }
+
+.container-fluid {
+  max-width: 1100px; }
+
+nav img {
+  display: inline;
+  height: 27px;
+  width: 27px; }
+
+nav form span.search {
+  background-color: #f0ab2d;
+  height: 38px; }
+
+nav a.cart {
+  text-decoration: none; }
+
+section.hero p {
+  font-size: 15px; }
+
+section.hero a {
+  border-radius: 2rem;
+  width: 130px; }
+
+section.hero div.center {
+  margin-top: 250px; }
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  height: 100px;
+  width: 100px;
+  outline: black;
+  background-size: 100%, 100%;
+  border-radius: 50%;
+  border: 1px solid black;
+  background-image: none; }
+
+.carousel-control-next-icon:after {
+  content: '>';
+  font-size: 55px;
+  color: #eb0e0e; }
+
+.carousel-control-prev-icon:after {
+  content: '<';
+  font-size: 55px;
+  color: red; }
+
+section.hero img {
+  height: 350px;
+  width: 250px; }
+
+section.steps img {
+  height: 240px; }
+
+section.steps p {
+  font-size: 14px; }
+
+section.shopbyimage button.first {
+  position: relative;
+  left: 325px;
+  bottom: -260px; }
+
+section.shopbyimage button.third {
+  position: relative;
+  left: 185px;
+  bottom: -55px; }
+
+section.shopbyimage img {
+  height: 600px;
+  margin-right: 130px; }
+
+section.shopbyimage button.second {
+  position: relative;
+  left: 215px;
+  bottom: 130px; }
+
+section.shopbyimage button i {
+  color: #d1e285;
+  font-size: 22px; }
+
+nav form {
+  width: 550px; }
+
+form.searchbar input {
+  border-radius: 2rem; }
+
+form.searchbar span {
+  border-radius: 2rem; }
+
+nav a.links {
+  border-radius: 2rem; }
+
+nav a i.icon {
+  color: #3b3b3b;
+  font-size: 22px; }
+
+.carousel-indicators .active {
+  background-color: #292827; }
+
+section.category {
+  margin-top: 1px; }
+
+nav a h5 {
+  color: #3a3a39; }
+
+section.happyman img {
+  height: 400px; }
+
+section.happyman input {
+  border-radius: 2rem; }
+
+section.happyman textarea {
+  border-radius: 1rem; }
+
+section.offers img {
+  height: 150px; }
+
+section.filter div.select {
+  width: 300px;
+  margin-left: 500px; }
+
+div.fixe {
+  margin-top: 60px; }
+
+section.signup button {
+  border-radius: 2rem; }
+
+section.buy img {
+  height: 60px;
+  width: 50px;
+  position: relative;
+  bottom: 55px; }
+
+section.buy div.happy {
+  display: inline-block;
+  line-height: 10px;
+  font-size: 13px; }
+
+section.buy p.prices {
+  line-height: 10px;
+  font-size: 14px; }
+
+section.buy div.happy span i {
+  color: #f0ab2d; }
+
+section.branddeals img {
+  height: 450px; }
+
+#footer {
+  font-weight: 200; }
+  #footer i {
+    font-size: 30px; }
+  #footer i.face {
+    color: #035dc5; }
+  #footer i.tweet {
+    color: #4ac2b8; }
+  #footer i.insta {
+    color: #dfab1c; }
+
+section.offers p {
+  line-height: 4px; }
+section.offers span.rating {
+  color: #d4862c; }
+
+div img.product {
+  height: 250px;
+  width: 250px; }
+
+div span.rating1 {
+  font-size: 10px;
+  color: #f0ab2d; }
+
+div p.hm {
+  margin-bottom: 0px; }
+
+div p.hi5 {
+  margin-bottom: 0px; }
+
+div p.hi6 {
+  font-size: 13px;
+  margin-bottom: 0px; }
+
+div a.hello {
+  width: 200px; }
+
+div img.signin {
+  height: 280px;
+  width: 180px; }
+
+div.myform form p input {
+  display: block;
+  width: 100%;
+  height: calc(1.5em + 0.75rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
+
+div.myform form p label {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: bolder;
+  font-size: 15px;
+  margin-top: 10px; }
+
+div.myform form p span {
+  display: block;
+  color: #6c757d;
+  margin: 4px; }
+
+div.myform ul li {
+  display: block;
+  list-style: none;
+  font-weight: 50px;
+  display: none; }
+
+div input.mybutton {
+  border-radius: 2rem; }
+
+form.mylogout {
+  display: inline; }
+
+input.mylink {
+  font-weight: bolder;
+  margin-bottom: 4px;
+  text-decoration: none; }
+
+i.mylink1 {
+  margin-right: -12px; }
+
+form.mylabel1 label {
+  font-size: 16px;
+  margin-right: 5px;
+  margin-top: -5px;
+  display: inline; }
+
+form.mylabel1 select {
+  display: inline;
+  width: 55px;
+  height: calc(1.5em + 0.75rem + 2px);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
+
+/*# sourceMappingURL=custom.css.map */

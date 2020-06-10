@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title%}
+login
+{% endblock %}
+
+{% block body %}
+<div class="container mt-5 myform">
+        <div class="row mt-5">
+                <div class="col-md-6 m-auto">
+                  <div class="text-center">
+                    <h1 class="text-center mb-3"><i class="fas fa-sign-in-alt"></i>  Login</h1>
+                    </div>
+                    </div>
+                    </div>
+    <form method="post">
+
+        {{form.as_p}}
+        {% csrf_token %}
+        
+            <input type="submit" value="login" class="btn btn-warning  btn-lg  mybutton">
+        
+        
+
+    </form>
+</div>
+{% endblock %}
